@@ -1,0 +1,32 @@
+.action-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Six equal parts */
+    gap: 10px; /* Space between the buttons */
+    padding: 10px;
+}
+ 
+.button-container {
+    display: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px; /* Define a minimum width */
+}
+ 
+/* .slds-avatar_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+ 
+.label {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: left;
+    color: #000;
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide the overflow text */
+    max-width: 100px; /* Adjust width as needed */
+    position: relative; /* Required for tooltip positioning */
+}

@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Dynamic Action Buttons">
+        <div class="action-container">
+            <template if:true={actions}>
+                <template for:each={actions} for:item="action">
+                    <div key={action.Id} class="button-container">
+                        <lightning-button-icon
+                            icon-name={action.Icon__c}
+                            alternative-text={action.Action__c}
+                            class="slds-avatar slds-avatar_circle"
+                            onclick={handleActionClick}
+                            data-url={action.URL__c}
+                            variant="brand">
+                        </lightning-button-icon>
+                        <div class="label">{action.Action__c}</div>
+                    </div>
+                </template>
+            </template>
+            <template if:true={error}>
+                <p class="error">{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
